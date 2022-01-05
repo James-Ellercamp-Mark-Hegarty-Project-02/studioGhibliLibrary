@@ -5,9 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Studio Ghibli Library</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet"> 
 </head>
 <body>
-    <h1>The Studio Ghibli Library</h1>
-    <script src="first-fetch.js"></script>
+    <header>
+        <ul>
+            <li><a>Studio Ghibli Library</a></li>
+        </ul>
+    </header>
+    <div class="content">
+
+        <h1>The Studio Ghibli Library</h1>
+        <h2>Select a film to find out more about it</h2>
+        <form action="#">
+            <select name="libraryList" id="libraryList">
+                <option value="dog">dog</option>
+                <option value="cat">cat</option>
+                <option value="bird">bird</option>
+                <option value="fish">fish</option>
+                <option value=""></option>
+            </select>
+        </form>
+    </div>
 </body>
+<footer>
+    <p>Created at Juno College</p>
+</footer>
 </html>
