@@ -10,10 +10,11 @@ fetch(studioGhibliCatalogue.url)
         })
         .then( (jsonData) => {
             console.log(jsonData);
-            jsonData.forEach(function(i){
-                console.log(i.title);
-            })
+            // jsonData.forEach(function(i){
+            //     console.log(i.title);
+            // })
         });
+
 
 
 
