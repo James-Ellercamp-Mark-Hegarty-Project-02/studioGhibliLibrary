@@ -1,0 +1,16 @@
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+        a {
+            text-decoration: none;
+            color: rgb(255, 254, 249);
+            // text-shadow: 1px 1px 3px rgb(0, 0, 0);
+            font-family: 'Roboto',
+            sans-serif;
+            font-weight: 400;
+            letter-spacing: 3px;
+        }
+    }
+}
