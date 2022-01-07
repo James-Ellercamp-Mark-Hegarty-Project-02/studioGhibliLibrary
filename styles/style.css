@@ -316,7 +316,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
-.film-content p {
+.film-content .description {
   width: 70%;
 }
 

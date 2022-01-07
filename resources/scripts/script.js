@@ -21,6 +21,15 @@ ghibliLibraryApp.getPieces = function() {
     event.preventDefault();
     const userChoice = libraryList.value;
     console.log(userChoice);
+
+    if (userChoice === "placeholder"){
+      h3Element.innerText = '';
+      imageElement.src = '';
+      descriptionElement.innerText = '';
+      imageElement.alt = '';
+      runElement.innerText = '';
+    }
+
       fetch(url)
         .then( (response) => {
             return response.json();
@@ -46,7 +55,6 @@ ghibliLibraryApp.getPieces = function() {
             
 
 
-            filmContentBox.style.border = "1px solid red";
             
         });
   })
