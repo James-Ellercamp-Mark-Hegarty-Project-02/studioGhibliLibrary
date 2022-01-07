@@ -20,14 +20,13 @@ ghibliLibraryApp.getPieces = function() {
   button.addEventListener('click', function(event){
     event.preventDefault();
     const userChoice = libraryList.value;
-    console.log(userChoice);
-
     if (userChoice === "placeholder"){
       h3Element.innerText = '';
       imageElement.src = '';
       descriptionElement.innerText = '';
       imageElement.alt = '';
       runElement.innerText = '';
+      filmContentBox.style.display = "none";
     }
 
       fetch(url)
@@ -44,9 +43,9 @@ ghibliLibraryApp.getPieces = function() {
             // console.log(search.image);
             // console.log(search.running_time + ` mins`);
 
-            console.log(filmListObj);
+            // console.log(filmListObj);
 
-
+            filmContentBox.style.display = "flex";
             h3Element.innerText = search.title;
             imageElement.src = search.image;
             imageElement.alt = `The poster for the Studio Ghibli film ${search.title}`;
