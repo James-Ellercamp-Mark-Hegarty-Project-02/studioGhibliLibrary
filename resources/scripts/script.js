@@ -21,12 +21,13 @@ ghibliLibraryApp.getPieces = function() {
     event.preventDefault();
     const userChoice = libraryList.value;
     if (userChoice === "placeholder"){
+      filmContentBox.style.display = "none";
       h3Element.innerText = '';
       imageElement.src = '';
       descriptionElement.innerText = '';
       imageElement.alt = '';
       runElement.innerText = '';
-      filmContentBox.style.display = "none";
+
     }
 
       fetch(url)
