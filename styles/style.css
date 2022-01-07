@@ -316,6 +316,9 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
+.film-content p {
+  width: 70%;
+}
 
 footer {
   display: -webkit-box;
