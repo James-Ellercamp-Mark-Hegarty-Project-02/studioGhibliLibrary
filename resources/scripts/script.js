@@ -6,29 +6,40 @@ ghibliLibraryApp.init = () => {
 }
 
 ghibliLibraryApp.getPieces = function() {
-  const url = new URL(`https://ghibliapi.herokuapp.com/films`);
+  const url = new URL(`https://ghibliapi.herokuapp.com/films/`);
   const libraryList = document.querySelector('select');
-  const listValue = libraryList.value;
-  const button = document.querySelector('input[type="submit"]');
+  // const listValue = libraryList.value;
+  const button = document.querySelector('button');
+  // const userChoice = libraryList.value;
+  const h3Element = document.querySelector('h3');
+  const filmContentBox = document.querySelector('.film-content');
 
-//   button.addEventListener('click', function(event){
-//       event.preventDefault;
-//       console.log(listValue);
-//   })
-  
-  console.log(listValue);
+  button.addEventListener('click', function(event){
+    event.preventDefault();
+    const userChoice = libraryList.value;
+    console.log(userChoice);
+      fetch(url)
+        .then( (response) => {
+            return response.json();
+        })
+        .then( (jsonData) => {
+          
+            const filmListObj = jsonData;
+            const search = filmListObj[userChoice];
+
+            console.log(search.title);
+            console.log(search.description);
+            console.log(search.image);
+            console.log(search.running_time + ` mins`);
+
+            h3Element.innerText = search.title;
+            
 
 
-//   url.search = new URLSearchParams({
-
-//   });
-
-  fetch(url)
-    .then(results => {
-      return results.json();
-    }).then(data => {
-      console.log(data[0].title);
-    })
+            filmContentBox.style.border = "1px solid red";
+            
+        });
+  })
 }
 
 
@@ -38,20 +49,3 @@ ghibliLibraryApp.init();
 
 
 
-
-// artApp.getPieces = function() {
-//   const url = new URL(`https://www.rijksmuseum.nl/api/en/collection`);
-//   url.search = new URLSearchParams({
-//     key: artApp.key,
-//     imgonly: true
-//   });
-
-//   fetch(url)
-//     .then(results => {
-//       // apply .json() method to our results object
-//       return results.json();
-//     }).then(data => {
-//       // print the data to our console
-//       console.log(data);
-//     })
-// }
