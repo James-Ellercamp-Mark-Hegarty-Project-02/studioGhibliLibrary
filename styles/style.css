@@ -384,3 +384,54 @@ footer {
 footer p {
   margin-top: 1rem;
 }
+
+@media (max-width: 730px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  ul li a {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 519px) {
+  .content form button {
+    margin-top: 5%;
+  }
+}
+@media (max-width: 438px) {
+  ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-left: 15px;
+  }
+  ul li a {
+    font-size: 1rem;
+    padding-left: 10px;
+  }
+}
+@media (max-width: 417px) {
+  .content form select {
+    max-width: 100%;
+  }
+
+  .film-content h3 {
+    font-size: 1.25rem;
+  }
+  .film-content .description {
+    line-height: 1.25;
+    width: 90%;
+    letter-spacing: normal;
+  }
+  .film-content .image-container {
+    width: 65%;
+  }
+}
