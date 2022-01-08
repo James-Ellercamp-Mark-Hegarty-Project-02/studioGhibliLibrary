@@ -28,8 +28,8 @@ ghibliLibraryApp.getPieces = function() {
       imageElement.alt = '';
       runElement.innerText = '';
 
-    }
-
+    } else {
+    
       fetch(url)
         .then( (response) => {
             return response.json();
@@ -52,12 +52,10 @@ ghibliLibraryApp.getPieces = function() {
             imageElement.alt = `The poster for the Studio Ghibli film ${search.title}`;
             descriptionElement.innerText = search.description;
             runElement.innerText = search.running_time + ' mins';
-            
-
 
             
-        });
-  })
+    });
+  }})
 }
 
 
