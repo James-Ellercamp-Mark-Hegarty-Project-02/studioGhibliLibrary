@@ -50,8 +50,8 @@ ghibliLibraryApp.getPieces = function() {
             h3Element.innerText = search.title;
             imageElement.src = search.image;
             imageElement.alt = `The poster for the Studio Ghibli film ${search.title}`;
-            descriptionElement.innerText = search.description;
-            runElement.innerText = search.running_time + ' mins';
+            descriptionElement.innerText = `Description: ` + search.description;
+            runElement.innerText = `Run time: ` + search.running_time + ' mins';
 
             
     });
