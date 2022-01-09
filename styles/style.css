@@ -284,18 +284,29 @@ body {
   border-radius: 3%;
   background: rgba(255, 255, 255, 0.2);
 }
+.content label {
+  color: #fffef9;
+  text-shadow: 1px 1px 3px black;
+  font-family: "Roboto", sans-serif;
+  text-transform: capitalize;
+  font-weight: 400;
+}
+.content button:focus {
+  border: 2px dashed #2727ff;
+}
 .content h1,
 .content h2 {
   color: #fffef9;
   text-shadow: 1px 1px 3px black;
   font-family: "Roboto", sans-serif;
-  letter-spacing: 3px;
 }
 .content h1 {
   font-weight: 700;
+  letter-spacing: 3px;
 }
 .content h2 {
   font-weight: 400;
+  letter-spacing: 1px;
 }
 
 .content::before {
@@ -337,11 +348,6 @@ body {
   border: 1px solid whitesmoke;
   border-radius: 3%;
   background: rgba(255, 255, 255, 0.2);
-}
-.film-content .libraryListLabel {
-  color: #fffef9;
-  border: 1px solid #fffef9;
-  padding: 3px;
 }
 .film-content h3 {
   font-size: 2rem;
