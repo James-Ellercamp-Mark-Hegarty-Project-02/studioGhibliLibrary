@@ -338,6 +338,11 @@ body {
   border-radius: 3%;
   background: rgba(255, 255, 255, 0.2);
 }
+.film-content .libraryListLabel {
+  color: #fffef9;
+  border: 1px solid #fffef9;
+  padding: 3px;
+}
 .film-content h3 {
   font-size: 2rem;
   font-weight: 700;

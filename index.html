@@ -20,7 +20,8 @@
         <div class="content wrapper">     
             <h1>The Studio Ghibli Library</h1>
             <h2>Select a film and scroll down to find out more about it</h2>
-            <form action="#">
+            <form action="#" id="filmMenu">
+                <label class="libraryListLabel" for="libraryList">Choose a film:</label>
                 <select name="libraryList">
                     <option value="placeholder">Select Film</option>
                     <option value="0">Castle In The Sky</option>
@@ -45,8 +46,7 @@
                     <option value="19">When Marnie Was There</option>
                     <option value="20">The Red Turtle</option>
                 </select>
-                <button>Submit</button>
-                <!-- <input type="submit" value="submit"> -->
+                <button for="libraryList">Submit</button>
             </form>
         </div>
         <div class="film-content wrapper">
