@@ -10,6 +10,15 @@ footer {
     letter-spacing: 3px;
     p {
         margin-top: 1rem;
+        a {
+            text-decoration: none;
+            color: rgb(255, 254, 249);
+        }
+        a:hover,
+        a:focus {
+            text-decoration: underline;
+        }
     }
+    
 }
 

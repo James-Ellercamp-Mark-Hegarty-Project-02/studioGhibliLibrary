@@ -401,6 +401,14 @@ footer {
 footer p {
   margin-top: 1rem;
 }
+footer p a {
+  text-decoration: none;
+  color: #fffef9;
+}
+footer p a:hover,
+footer p a:focus {
+  text-decoration: underline;
+}
 
 @media (max-width: 730px) {
   h1 {
