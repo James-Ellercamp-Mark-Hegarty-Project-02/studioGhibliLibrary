@@ -16,6 +16,7 @@ ghibliLibraryApp.getPieces = function() {
   const imageElement = document.querySelector('img');
   const descriptionElement = document.querySelector('.description');
   const runElement = document.querySelector('.run-time');
+  const formElement = document.querySelector('form');
 
   button.addEventListener('click', function(event){
     event.preventDefault();
@@ -39,12 +40,6 @@ ghibliLibraryApp.getPieces = function() {
             const filmListObj = jsonData;
             const search = filmListObj[userChoice];
 
-            // console.log(search.title);
-            // console.log(search.description);
-            // console.log(search.image);
-            // console.log(search.running_time + ` mins`);
-
-            // console.log(filmListObj);
 
             filmContentBox.style.display = "flex";
             h3Element.innerText = search.title;
@@ -52,16 +47,44 @@ ghibliLibraryApp.getPieces = function() {
             imageElement.alt = `The poster for the Studio Ghibli film ${search.title}`;
             descriptionElement.innerText = `Description: ` + search.description;
             runElement.innerText = `Run time: ` + search.running_time + ' mins';
-
             
     });
   }})
+  libraryList.addEventListener('submit', function(event){
+    event.preventDefault();
+    const userChoice = libraryList.value;
+    if (userChoice === "placeholder"){
+      filmContentBox.style.display = "none";
+      h3Element.innerText = '';
+      imageElement.src = '';
+      descriptionElement.innerText = '';
+      imageElement.alt = '';
+      runElement.innerText = '';
+  
+    } else {
+    
+      fetch(url)
+        .then( (response) => {
+            return response.json();
+        })
+        .then( (jsonData) => {
+          
+            const filmListObj = jsonData;
+            const search = filmListObj[userChoice];
+  
+  
+            filmContentBox.style.display = "flex";
+            h3Element.innerText = search.title;
+            imageElement.src = search.image;
+            imageElement.alt = `The poster for the Studio Ghibli film ${search.title}`;
+            descriptionElement.innerText = `Description: ` + search.description;
+            runElement.innerText = `Run time: ` + search.running_time + ' mins';
+            
+    });
+  }})
+  
 }
 
 
-
-  
+ 
 ghibliLibraryApp.init();
-
-
-

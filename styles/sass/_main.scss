@@ -20,10 +20,15 @@ body {
     h2 {
         color: rgb(255, 254, 249);
         text-shadow: 1px 1px 3px rgb(0, 0, 0);
-        // color: rgb(228, 137, 124);
         font-family: 'Roboto', sans-serif;
-        font-weight: 400;
         letter-spacing: 3px;
+    }
+    h1 {
+        font-weight: 700;
+    }
+    h2 { 
+        font-weight: 400;
+
     }
 }
 .content::before {
@@ -61,14 +66,12 @@ body {
 
     h3 {
         font-size: 2rem;
-        font-weight: 400;
+        font-weight: 700;
         letter-spacing: 3px;
-        // text-shadow: 1px 1px 3px rgb(0, 0, 0);
 
     }
     .description {
         width: 70%;
-        // font-family: 'Roboto', sans-serif;
         letter-spacing: 1px;
         line-height: 1.5;
     }
