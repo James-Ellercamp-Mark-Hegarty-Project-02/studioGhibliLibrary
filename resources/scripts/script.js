@@ -31,7 +31,11 @@ ghibliLibraryApp.getPieces = function() {
     
       fetch(url)
         .then( (response) => {
+          if (response.ok){
             return response.json();
+           } else {
+            throw new Error("Whoopsie! This call was unsuccessful. Just like my new years diet.");        
+          }
         })
         .then( (jsonData) => {
           
@@ -46,9 +50,13 @@ ghibliLibraryApp.getPieces = function() {
             descriptionElement.innerText = `Description: ` + search.description;
             runElement.innerText = `Run time: ` + search.running_time + ' mins';
             
-    });
-  }}) 
-}
+        })
+
+        .catch((err) => {
+         console.log(err);
+        });
+      }}) 
+    }
 
 
  
